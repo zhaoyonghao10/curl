@@ -35,45 +35,46 @@ struct detail {
 };
 
 static const struct detail scheme[] = {
-  { "dict", "#ifndef CURL_DISABLE_DICT" },
-  { "file", "#ifndef CURL_DISABLE_FILE" },
-  { "ftp", "#ifndef CURL_DISABLE_FTP" },
-  { "ftps", "#if defined(USE_SSL) && !defined(CURL_DISABLE_FTP)" },
-  { "gopher", "#ifndef CURL_DISABLE_GOPHER" },
-  { "gophers", "#if defined(USE_SSL) && !defined(CURL_DISABLE_GOPHER)" },
-  { "http", "#ifndef CURL_DISABLE_HTTP" },
-  { "https", "#if defined(USE_SSL) && !defined(CURL_DISABLE_HTTP)" },
-  { "imap", "#ifndef CURL_DISABLE_IMAP" },
-  { "imaps", "#if defined(USE_SSL) && !defined(CURL_DISABLE_IMAP)" },
-  { "ldap", "#ifndef CURL_DISABLE_LDAP" },
-  { "ldaps", "#if !defined(CURL_DISABLE_LDAP) && \\\n"
-             "  !defined(CURL_DISABLE_LDAPS) && \\\n"
-             "  ((defined(USE_OPENLDAP) && defined(USE_SSL)) || \\\n"
-             "   (!defined(USE_OPENLDAP) && defined(HAVE_LDAP_SSL)))" },
-  { "mqtt", "#ifndef CURL_DISABLE_MQTT" },
-  { "pop3", "#ifndef CURL_DISABLE_POP3" },
-  { "pop3s", "#if defined(USE_SSL) && !defined(CURL_DISABLE_POP3)" },
-  { "rtmp", "#ifdef USE_LIBRTMP" },
-  { "rtmpt", "#ifdef USE_LIBRTMP" },
-  { "rtmpe", "#ifdef USE_LIBRTMP" },
-  { "rtmpte", "#ifdef USE_LIBRTMP" },
-  { "rtmps", "#ifdef USE_LIBRTMP" },
-  { "rtmpts", "#ifdef USE_LIBRTMP" },
-  { "rtsp", "#ifndef CURL_DISABLE_RTSP" },
-  { "scp", "#ifdef USE_SSH" },
-  { "sftp", "#ifdef USE_SSH" },
-  { "smb", "#if !defined(CURL_DISABLE_SMB) && \\\n"
-           "  defined(USE_CURL_NTLM_CORE) && (SIZEOF_CURL_OFF_T > 4)" },
-  { "smbs", "#if defined(USE_SSL) && !defined(CURL_DISABLE_SMB) && \\\n"
-            "  defined(USE_CURL_NTLM_CORE) && (SIZEOF_CURL_OFF_T > 4)" },
-  { "smtp", "#ifndef CURL_DISABLE_SMTP" },
-  { "smtps", "#if defined(USE_SSL) && !defined(CURL_DISABLE_SMTP)" },
-  { "telnet", "#ifndef CURL_DISABLE_TELNET" },
-  { "tftp", "#ifndef CURL_DISABLE_TFTP" },
-  { "ws",
-    "#if !defined(CURL_DISABLE_WEBSOCKETS) && !defined(CURL_DISABLE_HTTP)" },
-  { "wss", "#if !defined(CURL_DISABLE_WEBSOCKETS) && \\\n"
-           "  defined(USE_SSL) && !defined(CURL_DISABLE_HTTP)" },
+  {"dict", "#ifndef CURL_DISABLE_DICT" },
+  {"file", "#ifndef CURL_DISABLE_FILE" },
+  {"ftp", "#ifndef CURL_DISABLE_FTP" },
+  {"ftps", "#if defined(USE_SSL) && !defined(CURL_DISABLE_FTP)" },
+  {"gopher", "#ifndef CURL_DISABLE_GOPHER" },
+  {"gophers", "#if defined(USE_SSL) && !defined(CURL_DISABLE_GOPHER)" },
+  {"http", "#ifndef CURL_DISABLE_HTTP" },
+  {"https", "#if defined(USE_SSL) && !defined(CURL_DISABLE_HTTP)" },
+  {"imap", "#ifndef CURL_DISABLE_IMAP" },
+  {"imaps", "#if defined(USE_SSL) && !defined(CURL_DISABLE_IMAP)" },
+  {"ldap", "#ifndef CURL_DISABLE_LDAP" },
+  {"ldaps", "#if !defined(CURL_DISABLE_LDAP) && \\\n"
+   "  !defined(CURL_DISABLE_LDAPS) && \\\n"
+   "  ((defined(USE_OPENLDAP) && defined(USE_SSL)) || \\\n"
+   "   (!defined(USE_OPENLDAP) && defined(HAVE_LDAP_SSL)))" },
+  {"mqtt", "#ifndef CURL_DISABLE_MQTT" },
+  {"mqtts", "#if defined(USE_SSL) && !defined(CURL_DISABLE_MQTT)" },
+  {"pop3", "#ifndef CURL_DISABLE_POP3" },
+  {"pop3s", "#if defined(USE_SSL) && !defined(CURL_DISABLE_POP3)" },
+  {"rtmp", "#ifdef USE_LIBRTMP" },
+  {"rtmpt", "#ifdef USE_LIBRTMP" },
+  {"rtmpe", "#ifdef USE_LIBRTMP" },
+  {"rtmpte", "#ifdef USE_LIBRTMP" },
+  {"rtmps", "#ifdef USE_LIBRTMP" },
+  {"rtmpts", "#ifdef USE_LIBRTMP" },
+  {"rtsp", "#ifndef CURL_DISABLE_RTSP" },
+  {"scp", "#ifdef USE_SSH" },
+  {"sftp", "#ifdef USE_SSH" },
+  {"smb", "#if !defined(CURL_DISABLE_SMB) && \\\n"
+   "  defined(USE_CURL_NTLM_CORE) && (SIZEOF_CURL_OFF_T > 4)" },
+  {"smbs", "#if defined(USE_SSL) && !defined(CURL_DISABLE_SMB) && \\\n"
+   "  defined(USE_CURL_NTLM_CORE) && (SIZEOF_CURL_OFF_T > 4)" },
+  {"smtp", "#ifndef CURL_DISABLE_SMTP" },
+  {"smtps", "#if defined(USE_SSL) && !defined(CURL_DISABLE_SMTP)" },
+  {"telnet", "#ifndef CURL_DISABLE_TELNET" },
+  {"tftp", "#ifndef CURL_DISABLE_TFTP" },
+  {"ws",
+   "#if !defined(CURL_DISABLE_WEBSOCKETS) && !defined(CURL_DISABLE_HTTP)" },
+  {"wss", "#if !defined(CURL_DISABLE_WEBSOCKETS) && \\\n"
+   "  defined(USE_SSL) && !defined(CURL_DISABLE_HTTP)" },
   { NULL, NULL }
 };
 
